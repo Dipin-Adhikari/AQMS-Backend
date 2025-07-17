@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AQMS Dashboard</title>
+</head>
+<body>
+  <h1>Air Quality Monitoring System</h1>
+  <table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Temperature</th>
+      <th>Humidity</th>
+      <th>PM1</th>
+      <th>PM2.5</th>
+      <th>PM10</th>
+      <th>Timestamp</th>
+    </tr>
+    {% for row in data %}
+    <tr>
+      <td>{{ row.id }}</td>
+      <td>{{ row.temperature }}</td>
+      <td>{{ row.humidity }}</td>
+      <td>{{ row.pm1 }}</td>
+      <td>{{ row.pm2_5 }}</td>
+      <td>{{ row.pm10 }}</td>
+      <td>{{ row.timestamp }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
